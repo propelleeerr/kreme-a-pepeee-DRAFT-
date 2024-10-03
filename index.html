@@ -195,6 +195,95 @@
       background-color: white;
       color: #684e4e;
     }
+
+    /* Responsive Styles */
+@media (max-width: 768px) {
+  /* Adjust the logo and logo text */
+  .logo {
+    max-height: 70px; /* Slightly reduce logo size */
+  }
+
+  .logo-text {
+    font-size: 22px; /* Adjust font size for logo text */
+  }
+
+  /* Adjust header layout */
+  .header {
+    flex-direction: column; /* Stack header elements vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  /* Search bar styling */
+  .search-container {
+    width: 100%; /* Make search bar full width */
+    margin-top: 10px; /* Add space above search bar */
+  }
+
+  .search-container input[type="text"] {
+    width: calc(100% - 40px); /* Adjust width to fit */
+  }
+
+  /* Button container styling */
+  .button-container {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: flex-start; /* Align items to the start */
+    margin-left: 0; /* Reset margin */
+  }
+
+  .button-container a {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
+
+  /* Content styles */
+  .big-heading {
+    font-size: 30px; /* Reduce font size for smaller screens */
+    margin-left: 0; /* Reset margin */
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .explore {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    margin-left: 0; /* Reset margin */
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .explore-button {
+    margin-left: 0; /* Reset margin */
+    text-align: center; /* Center button on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .big-heading {
+    font-size: 24px; /* Further reduce font size */
+  }
+
+  .explore {
+    font-size: 12px; /* Further reduce font size */
+  }
+
+  .explore-button {
+    padding: 8px 16px; /* Adjust button padding */
+  }
+
+  /* Search bar input */
+  .search-container input[type="text"] {
+    padding: 6px 10px; /* Reduce padding */
+  }
+
+  /* Adjust icon sizes */
+  .search-container button i,
+  .cart-button i,
+  .button-container .home-button i {
+    font-size: 14px; /* Reduce icon size */
+  }
+
+  .cart-button {
+    margin-left: 0; /* Reset margin */
+  }
+}
+
   </style>
 </head>
 <body>
