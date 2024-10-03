@@ -32,8 +32,8 @@
     /* Header container for better layout control */
     .header {
       display: flex;
-      flex-direction: column; /* Stack items vertically on small screens */
-      align-items: flex-start; /* Align items to the start */
+      justify-content: space-between; /* Space between logo/text and search bar */
+      align-items: center; /* Center items vertically */
       margin-bottom: 20px;
       padding: 10px 0; /* Add padding for aesthetics */
     }
@@ -42,8 +42,6 @@
     .logo-container {
       display: flex;
       align-items: center; /* Center items vertically */
-      width: 100%; /* Full width */
-      margin-bottom: 10px; /* Space between logo and search bar */
     }
 
     /* Logo styling */
@@ -54,7 +52,7 @@
 
     /* Logo text styling */
     .logo-text {
-      font-size: 24px; /* Adjusted font size for mobile */
+      font-size: 28px; /* Adjusted font size */
       font-weight: bold; /* Bold text */
       color: #605b4a; /* Text color */
       font-family: 'Acme', sans-serif; /* Use Acme font */
@@ -66,7 +64,6 @@
     .search-container {
       display: flex;
       align-items: center;
-      width: 100%; /* Full width */
     }
 
     .search-container input[type="text"] {
@@ -119,19 +116,18 @@
     /* Button container styling */
     .button-container {
       display: flex;
-      flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-      justify-content: flex-start; /* Align items to the start */
+      align-items: center;
       margin-top: 20px; /* Space above buttons */
+      margin-left: 20px;
     }
 
     .button-container a {
       text-decoration: none;
       color: black;
       font-weight: bold;
-      margin-right: 10px; /* Reduced margin for mobile */
+      margin-right: 20px;
       display: flex;
       align-items: center;
-      margin-bottom: 10px; /* Space below each button */
     }
 
     .button-container a:hover {
@@ -155,10 +151,11 @@
     .about-section {
       margin-top: 60px;
       text-align: center;
+      
     }
 
     .about-section h2 {
-      font-size: 24px; /* Reduced font size for mobile */
+      font-size: 28px;
       margin-bottom: 10px;
       color: #605b4a;
     }
@@ -178,7 +175,7 @@
     }
 
     .mission-section h3 {
-      font-size: 20px; /* Reduced font size for mobile */
+      font-size: 24px;
       margin-bottom: 10px;
       color: #605b4a;
     }
@@ -196,7 +193,7 @@
     }
 
     .team-section h2 {
-      font-size: 24px; /* Reduced font size for mobile */
+      font-size: 28px;
       margin-bottom: 20px;
       color: #605b4a;
     }
@@ -250,152 +247,166 @@
     }
 
     #mission {
-      background-color: rgb(236, 234, 231); /* Light background color for better visibility */
-    }
+    background-color: rgb(236, 234, 231); /* Light background color for better visibility */
+}
 
-    #mission h2 {
-      color: #605b4a; /* Header color */
-      font-size: 28px; /* Adjust the font size */
-      margin-bottom: 10px; /* Space below the header */
-      text-align: center;
-    }
+#mission h2 {
+    color: #605b4a; /* Header color */
+    font-size: 28px; /* Adjust the font size */
+    margin-bottom: 10px; /* Space below the header */
+    text-align: center;
+}
 
-    #mission ol {
-      padding-left: 20px; /* Indent the list */
-    }
+#mission ol {
+    padding-left: 20px; /* Indent the list */
+}
 
-    #mission li {
-      margin-bottom: 10px; /* Space between items */
-      font-size: 16px; /* Font size for list items */
-      color: #494538;
-    }
+#mission li {
+    margin-bottom: 10px; /* Space between items */
+    font-size: 16px; /* Font size for list items */
+    color: #494538;
+}
 
-    #mission li p {
-      margin: 0 20px;
-    }
+#mission li p {
+   margin: 0 20px;
+}
 
-    /* Media Queries for responsiveness */
-    @media (max-width: 768px) {
-      .header {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: center; /* Center items */
-      }
-
-      .logo-text {
-        font-size: 20px; /* Smaller logo text */
-        text-align: center; /* Center text */
-      }
-
-      .search-container {
-        width: 100%; /* Full width for search bar */
-      }
-
-      .search-container input[type="text"] {
-        width: 100%; /* Full width input */
-      }
-
-      .team-member {
-        width: 90%; /* Full width for mobile */
-      }
-    }
-
-    @media (max-width: 480px) {
-      .logo-text {
-        font-size: 18px; /* Further reduce font size */
-      }
-
-      .team-member {
-        width: 95%; /* Almost full width for smaller screens */
-      }
-    }
   </style>
-  <title>Kreme-a-Pepe</title>
 </head>
 <body>
   <div class="header">
+    <!-- Logo and text container -->
     <div class="logo-container">
-      <img src="pictures/LOGO.png" alt="Kreme-a-Pepe Logo" class="logo" />
-      <div class="logo-text">Kreme-a-Pepe</div>
+      <img src="pictures/LOGO.png" alt="KREME-A-PEPE-LOGO" class="logo" />
+      <span class="logo-text">Where every bite is worth every peso!</span>
     </div>
+
+    <!-- Search bar -->
     <div class="search-container">
       <input type="text" placeholder="Search..." />
-      <button type="button">
+      <button>
         <i class="fas fa-search"></i>
       </button>
-      <button class="cart-button" type="button">
+      <a href="CHECKOUT.html" class="cart-button">
         <i class="fas fa-shopping-cart"></i>
-      </button>
+      </a>
     </div>
   </div>
 
+  <!-- Buttons and line -->
   <div class="button-container">
-    <a href="index.html" class="home-button"><i class="fas fa-home"></i>Home</a>
+    <a href="index.html" class="home-button">
+      <i class="fas fa-home"></i> Home
+    </a>
+    <a href="ABOUT.html">About us</a>
+    <a href="STORY.html">Our story</a>
+    <a href="KREME.html">Menu</a>
+    <a href="NEWS.html">News</a>
+    <a href="CONTACT.html">Contact us</a>
+    <a href="FAQs.html">FAQs</a>
     <div class="line"></div>
-    <a href="about.html">About Us</a>
-    <a href="menu.html">Menu</a>
-    <a href="team.html">Team</a>
-    <a href="contact.html">Contact</a>
   </div>
 
+  <!-- About Us Section -->
   <div class="about-section">
     <h2>About Us</h2>
-    <p>Kreme-a-Pepe is a local food hub that offers a variety of delicacies...</p>
+    <p>
+      Welcome to Kreme-a-Pepe, where we celebrate Filipino flavors in a fun and unique way! 
+      Our specialty, the Kreme-a-Pepe, is a coin-shaped Taiyaki inspired by the Philippine peso, 
+      filled with delicious local ingredients. We are a passionate team of student entrepreneurs 
+      dedicated to sharing the taste of home while connecting with our community. With every bite, 
+      we aim to bring a smile and a sense of belonging, making our delightful treats a perfect choice
+      for anyone looking to enjoy a flavorful twist on tradition.
+    </p>
   </div>
 
-  <div class="mission-section" id="mission">
-    <h3>Our Mission</h3>
-    <p>We aim to provide the best quality food while maintaining sustainability...</p>
-    <ol>
-      <li>Quality Ingredients
-        <p>We prioritize sourcing the freshest local produce...</p>
+ <!-- Mission Section -->
+<section id="mission">
+  <h2>Our Mission</h2>
+  <ol>
+      <li>
+          <p>Celebrate Filipino Culture: To honor and preserve our rich culinary heritage by 
+          offering innovative, delicious, and culturally significant food products that resonate 
+          with the hearts of our customers.</p>
       </li>
-      <li>Sustainable Practices
-        <p>We are committed to reducing our carbon footprint...</p>
+      <li>
+          <p>Promote Community Engagement: To actively engage with our community by participating 
+          in local events, supporting initiatives, and providing unique food experiences that bring 
+          people together.</p>
       </li>
-      <li>Community Engagement
-        <p>We actively participate in community events...</p>
+      <li>
+          <p>Deliver Quality and Affordability: To provide high-quality, flavorful snacks that are 
+          accessible and affordable for everyone, ensuring that our products can be enjoyed by students, 
+          families, and food enthusiasts alike.</p>
       </li>
-    </ol>
-  </div>
+      <li>
+          <p>Encourage Culinary Exploration: To inspire individuals to embrace the fusion of traditional 
+          and modern flavors, making Kreme-a-Pepe a must-try for those looking to embark on a delicious 
+          culinary adventure.</p>
+      </li>
+  </ol>
+</section>
 
+
+  <!-- Team Section -->
   <div class="team-section">
-    <h2>Our Team</h2>
+    <h2>Meet Our Team</h2>
     <div class="team-container">
       <div class="team-member">
-        <img src="pictures/TEAM_MEMBER_1.png" alt="Team Member 1" />
-        <h3>Kristian Marzan</h3>
+        <img src="pictures/JILLIAN.png" alt="Team Member 1" />
+        <h3>Jillian Bernice Laviste</h3>
         <p class="position">Chief Executive Officer (CEO)</p>
-        <p class="info">Kristian is the visionary behind Kreme-a-Pepe. His leadership and creativity...</p>
+        <p class="info">As a Maka-Filipino student, Jillian is committed to promoting local businesses and has inspired the group to focus on a venture that showcases traditional Filipino flavors.</p>
       </div>
       <div class="team-member">
-        <img src="pictures/TEAM_MEMBER_2.png" alt="Team Member 2" />
-        <h3>Goriel B. Ulyate</h3>
-        <p class="position">Chief Marketing Officer (CMO)</p>
-        <p class="info">Goriel leads the marketing strategies and brand development...</p>
+        <img src="pictures/ELLAH.png" alt="Team Member 2" />
+        <h3>Eluinah Jowelle Pagao</h3>
+        <p class="position">Chief Supply Chain Officer (CSCO) & Head of Supply Chain</p>
+        <p class="info">Eluinah, an active community member, has established strong connections with numerous entrepreneurs and investors, making her the perfect leader for the supply team.</p>
       </div>
       <div class="team-member">
-        <img src="pictures/TEAM_MEMBER_3.png" alt="Team Member 3" />
+        <img src="pictures/JANA.png" alt="Team Member 3" />
         <h3>Laura Juliana Yulo</h3>
         <p class="position">Chief Operating Officer (COO) and Head of Logistics</p>
-        <p class="info">Jana excels in managing school activities and events...</p>
+        <p class="info">Jana excels in managing school activities and events. She frequently contributes her trucks and other transportation resources, establishing her as the ideal head of the logistics team.</p>
       </div>
       <div class="team-member">
-        <img src="pictures/TEAM_MEMBER_4.png" alt="Team Member 4" />
-        <h3>Team Member 4 Name</h3>
-        <p class="position">Position</p>
-        <p class="info">Brief description about Team Member 4.</p>
+        <img src="pictures/KEIMI.png" alt="Team Member 4" />
+        <h3>Krizteffe Marie Nieves</h3>
+        <p class="position">Head Chef</p>
+        <p class="info">With a passion for baking cakes, cupcakes, and cookies, Keimi is dedicated to turning cravings into reality. As the head chef of the company, she will oversee product production.</p>
       </div>
-      <!-- Add more team members as needed -->
+      <div class="team-member">
+        <img src="pictures/YDDA.png" alt="Team Member 5" />
+        <h3>Ydda Lauren Nogra</h3>
+        <p class="position">Head of Marketing and Advertising (CMO)</p>
+        <p class="info">Ydda, a photographer and member of the school's photography club, will manage the product's marketing and advertising by creating impactful visuals.</p>
+      </div>
+      <div class="team-member">
+        <img src="pictures/NAINA.png" alt="Team Member 6" />
+        <h3>Naina Liza Rae Abainza</h3>
+        <p class="position">Social Media Manager</p>
+        <p class="info">Naina, an avid social media user, participates in discussions about various sweets and will manage the social media accounts of the company.</p>
+      </div>
+      <div class="team-member">
+        <img src="pictures/ARICA.png" alt="Team Member 7" />
+        <h3>Arica Dy Pueco</h3>
+        <p class="position">Brand Ambassador and Model</p>
+        <p class="info">Arica will be the model and advertiser, using her enthusiasm and strong social media presence to boost product visibility.</p>
+      </div>
+      <div class="team-member">
+        <img src="pictures/SOFIA.png" alt="Team Member 8" />
+        <h3>Katrina Sofia Joson</h3>
+        <p class="position">Food Critic</p>
+        <p class="info">Sofia, a lover of Filipino desserts, will be the food critic of the company, using her broad palate to evaluate and review the product.</p>
+      </div>
+      <div class="team-member">
+        <img src="pictures/MARTH.png" alt="Team Member 9" />
+        <h3>Marthanello Llovido</h3>
+        <p class="position">Product Innovator and Cultural Consultant (CCPI)</p>
+        <p class="info">Marthanello, passionate about traveling to Japan, is inspired by Taiyaki and aims to introduce Japanese culture to his home country.</p>
+      </div>
     </div>
   </div>
-
-  <footer style="text-align: center; margin-top: 40px;">
-    <p>&copy; 2024 Kreme-a-Pepe. All rights reserved.</p>
-    <div>
-      <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
-      <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
-      <a href="mailto:info@kremeapepe.com">Email Us</a>
-    </div>
-  </footer>
 </body>
 </html>
