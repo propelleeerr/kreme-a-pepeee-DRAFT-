@@ -155,70 +155,72 @@
       font-size: 25px;
       color: #494538; 
       font-weight: bold;
+      margin-bottom: 10px; /* Add bottom margin for spacing */
     }
 
     .big-heading {
-      font-size: 30px; /* Adjusted font size */
+      font-size: 35px; /* Adjusted font size */
       font-weight: bold; /* Bold text */
       color: #494538; /* Text color */
       font-family: 'Acme', sans-serif; /* Use Acme font */
       letter-spacing: 1px; /* Add some spacing between letters */
       margin-left: 30px;
-      margin-top: 4px;
+      margin-top: 50px;
     }
 
     .answers-content {
       margin-left: 30px;
       color: #494538;
-      font-family: 'Outline', sans-serif;
+      font-family: 'Outfit', sans-serif;
       letter-spacing: 1px;
+      font-size: 15px;
+      margin-top: 5px; /* Add top margin for additional spacing */
     }
 
     @media (max-width: 768px) {
-    .header {
-        flex-direction: column; /* Stack header elements vertically */
-        align-items: flex-start; /* Align items to the start */
-    }
+      .header {
+          flex-direction: column; /* Stack header elements vertically */
+          align-items: flex-start; /* Align items to the start */
+      }
 
-    .logo-container {
-        margin-bottom: 10px; /* Space below the logo */
-    }
+      .logo-container {
+          margin-bottom: 10px; /* Space below the logo */
+      }
 
-    .search-container {
-        width: 100%; /* Full width for the search bar */
-    }
+      .search-container {
+          width: 100%; /* Full width for the search bar */
+      }
 
-    .search-container input[type="text"] {
-        width: 100%; /* Full width for better usability */
-    }
+      .search-container input[type="text"] {
+          width: 100%; /* Full width for better usability */
+      }
 
-    .button-container {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: flex-start; /* Align buttons to the start */
-        margin-left: 0; /* Reset margin */
-    }
+      .button-container {
+          flex-direction: column; /* Stack buttons vertically */
+          align-items: flex-start; /* Align buttons to the start */
+          margin-left: 0; /* Reset margin */
+      }
 
-    .button-container a {
-        margin-bottom: 10px; /* Space between buttons */
-    }
+      .button-container a {
+          margin-bottom: 10px; /* Space between buttons */
+      }
 
-    .big-heading {
-        font-size: 36px; /* Reduce font size for smaller screens */
-        margin-left: 0; /* Reset margin */
-        text-align: center; /* Center text */
-    }
+      .big-heading {
+          font-size: 36px; /* Reduce font size for smaller screens */
+          margin-left: 0; /* Reset margin */
+          text-align: center; /* Center text */
+      }
 
-    .explore {
-        text-align: center; /* Center the explore text */
-        margin-left: 0; /* Reset margin */
-    }
+      .explore {
+          text-align: center; /* Center the explore text */
+          margin-left: 0; /* Reset margin */
+      }
 
-    .explore-button {
-        margin-left: 0; /* Reset margin */
-        text-align: center; /* Center the button */
+      .explore-button {
+          margin-left: 0; /* Reset margin */
+          text-align: center; /* Center the button */
+      }
     }
-}
-
   </style>
 </head>
 <body>
@@ -255,20 +257,48 @@
     <div class="line"></div>
   </div>
 
-  <div class="content"></div>
-    <!-- Big Heading below buttons and containers -->
-    <h1 class="big-heading">Frequently Asked Questions</h1>
-    <p class="content">1. Why is the product called "Kreme-a-Pepe"?</p>
-    </div>
+  <!-- Big Heading below buttons and containers -->
+  <h1 class="big-heading">Frequently Asked Questions</h1>
+  
+  <p class="content question">1. Why is the product called "Kreme-a-Pepe"?</p>
+  <p class="answers-content answer">The name “Kreme-a-Pepe” playfully combines the words “Kreme” with 
+  the nickname of Jose Rizal, "Pepe,” which symbolizes the commitment of the company in
+  celebrating and promoting Filipino heritage through its unique offerings.</p>
 
-  <div class="answers-content"></div>
-    <p class="answers-content">The name “Kreme-a-Pepe” playfully combines the words “Kreme” with 
-      the nickname of Jose Rizal, "Pepe,” which symbolizes the committment of the company in
-      celebrating and promoting Filipino heritage through its unique offerings.</p>
-    </div>
+  <p class="content question">2. What inspired the creation of Kreme-a-Pepe?</p>
+  <p class="answers-content answer">We offer a diverse menu featuring traditional Filipino dishes with a modern twist, 
+  desserts, and beverages that cater to a wide range of tastes.</p>
 
-  </div>
+  <p class="content question">3. What types of products does Kreme-a-Pepe offer?</p>
+  <p class="answers-content answer">yap yap yap yap yap yap.</p>
 
-  <!-- Other content goes here -->
+  <p class="content question">4. Are there any unique ingredients or recipes used in Kreme-a-Pepe's products??</p>
+  <p class="answers-content answer">Kreme-a-Pepe offers yap yap yap.</p>
+
+  <p class="content question">5. Are there vegetarian or vegan options available?</p>
+  <p class="answers-content answer">Yes, we have several vegetarian and vegan options that are 
+    delicious and satisfying.</p>
+
+  <p class="content question">6. Do you have gluten-free options?</p>
+  <p class="answers-content answer">We offer gluten-free options for those with gluten sensitivities.</p>
+
+  <p class="content question">7. Do you offer delivery services?</p>
+  <p class="answers-content answer">Yes, we partner with local delivery services to offer convenient delivery options to our customers.
+    You can find us on delivery platforms such as Foodpanda, GrabFood, and Hungrily.
+  </p>
+
+  <p class="content question">8. Where can customers find Kreme-a-Pepe products?</p>
+  <p class="answers-content answer">yap yap yap.</p>
+
+  <p class="content question">9. Do you offer catering services?</p>
+  <p class="answers-content answer">Yes, we provide catering services for events of all sizes. Please
+    reach out for more information through our contact information.</p>
+
+  <p class="content question">10. What is the best way to stay updated on Kreme-a-Pepe's news and promotions?</p>
+  <p class="answers-content answer">The best way to stay updated is through our website.</p>
+
+  <p class="content question">11. How can I provide feedback about my experience?</p>
+  <p class="answers-content answer">We welcome feedback from our customers! Please fill out the 
+  feedback form on our website or speak to our staff directly.</p>
 </body>
 </html>
