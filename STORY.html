@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link
     rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap"
@@ -144,6 +146,52 @@
       margin-left: 20px; 
       margin-right: 20px;
     }
+
+    @media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack header elements vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .logo-container {
+        margin-bottom: 10px; /* Space below the logo */
+    }
+
+    .search-container {
+        width: 100%; /* Full width for the search bar */
+    }
+
+    .search-container input[type="text"] {
+        width: 100%; /* Full width for better usability */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: flex-start; /* Align buttons to the start */
+        margin-left: 0; /* Reset margin */
+    }
+
+    .button-container a {
+        margin-bottom: 10px; /* Space between buttons */
+    }
+
+    .big-heading {
+        font-size: 36px; /* Reduce font size for smaller screens */
+        margin-left: 0; /* Reset margin */
+        text-align: center; /* Center text */
+    }
+
+    .explore {
+        text-align: center; /* Center the explore text */
+        margin-left: 0; /* Reset margin */
+    }
+
+    .explore-button {
+        margin-left: 0; /* Reset margin */
+        text-align: center; /* Center the button */
+    }
+}
+
   </style>
 </head>
 <body>
