@@ -17,7 +17,6 @@
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
     rel="stylesheet"
   />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport meta tag -->
   
   <style>
     body {
@@ -31,16 +30,25 @@
     /* Header container for better layout control */
     .header {
       display: flex;
-      justify-content: space-between; /* Space between logo/text and search bar */
-      align-items: center; /* Center items vertically */
+      flex-direction: column; /* Stack items vertically on small screens */
+      align-items: flex-start; /* Align items to the start */
       margin-bottom: 20px;
       padding: 10px 0; /* Add padding for aesthetics */
+    }
+
+    /* Adjust header for larger screens */
+    @media (min-width: 600px) {
+      .header {
+        flex-direction: row; /* Align items in a row on larger screens */
+      }
     }
 
     /* Logo and text container */
     .logo-container {
       display: flex;
       align-items: center; /* Center items vertically */
+      width: 100%; /* Ensure full width on small screens */
+      justify-content: space-between; /* Space logo and text */
     }
 
     /* Logo styling */
@@ -51,7 +59,7 @@
 
     /* Logo text styling */
     .logo-text {
-      font-size: 28px; /* Adjusted font size */
+      font-size: 24px; /* Adjusted font size */
       font-weight: bold; /* Bold text */
       color: #605b4a; /* Text color */
       font-family: 'Acme', sans-serif; /* Use Acme font */
@@ -63,6 +71,8 @@
     .search-container {
       display: flex;
       align-items: center;
+      margin-top: 10px; /* Space above search bar on small screens */
+      width: 100%; /* Full width on small screens */
     }
 
     .search-container input[type="text"] {
@@ -70,7 +80,8 @@
       border: 1px solid #ccc; /* Light border */
       border-radius: 20px; /* Rounded corners */
       height: 40px; /* Increased height for a more substantial look */
-      width: 200px; /* Width of the search bar */
+      width: 100%; /* Full width on small screens */
+      max-width: 200px; /* Max width on larger screens */
       opacity: 1; /* Full opacity for better readability */
       font-family: "Outfit", sans-serif; /* Use the same font family as the body */
       font-size: 14px; /* Match the font size of the body */
@@ -115,9 +126,15 @@
     /* Button container styling */
     .button-container {
       display: flex;
-      align-items: center;
+      flex-direction: column; /* Stack items vertically on small screens */
       margin-top: 20px; /* Space above buttons */
-      margin-left: 20px;
+    }
+
+    @media (min-width: 600px) {
+      .button-container {
+        flex-direction: row; /* Align items in a row on larger screens */
+        align-items: center;
+      }
     }
 
     .button-container a {
@@ -127,6 +144,13 @@
       margin-right: 20px;
       display: flex;
       align-items: center;
+      margin-bottom: 10px; /* Space below buttons on small screens */
+    }
+
+    @media (min-width: 600px) {
+      .button-container a {
+        margin-bottom: 0; /* Remove margin below buttons on larger screens */
+      }
     }
 
     .button-container a:hover {
@@ -153,25 +177,26 @@
     }
 
     .big-heading {
-      font-size: 50px; /* Adjusted font size */
+      font-size: 32px; /* Adjusted font size for better readability on mobile */
       font-weight: bold; /* Bold text */
       color: #494538; /* Text color */
       font-family: 'Acme', sans-serif; /* Use Acme font */
       letter-spacing: 1px; /* Add some spacing between letters */
-      margin-left: 120px;
+      margin-left: 0; /* Center text */
       margin-top: 40px;
+      text-align: center; /* Center text */
     }
 
     .explore {
       font-size: 16px;
       font-family: "Outfit", sans-serif;
       color: black;
-      margin-left: 120px;
+      margin-left: 0; /* Center text */
+      text-align: center; /* Center text */
     }
 
     .explore-button {
       display: inline-block;
-      margin-left: 120px;
       margin-top: 15px;
       padding: 10px 20px;
       background-color: rgb(236, 234, 231);
@@ -195,53 +220,6 @@
     .explore-button:hover {
       background-color: white;
       color: #684e4e;
-    }
-
-    /* Mobile styles */
-    @media (max-width: 600px) {
-      .header {
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align items to the left */
-      }
-
-      .logo-container {
-        margin-bottom: 10px; /* Space below the logo */
-      }
-
-      .search-container {
-        width: 100%; /* Full width for the search container */
-        margin-top: 10px; /* Space above the search bar */
-      }
-
-      .search-container input[type="text"] {
-        width: 100%; /* Full width for the input */
-      }
-
-      .big-heading {
-        font-size: 30px; /* Smaller font size for mobile */
-        margin-left: 0; /* Reset margin */
-        text-align: center; /* Center the heading */
-      }
-
-      .explore {
-        margin-left: 0; /* Reset margin */
-        text-align: center; /* Center the text */
-      }
-
-      .explore-button {
-        margin-left: 0; /* Reset margin */
-        text-align: center; /* Center the button */
-      }
-
-      .button-container {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: flex-start; /* Align items to the left */
-        margin-left: 0; /* Reset margin */
-      }
-
-      .button-container a {
-        margin: 5px 0; /* Space between buttons */
-      }
     }
   </style>
 </head>
@@ -279,13 +257,12 @@
     <div class="line"></div>
   </div>
 
-
   <div class="content">
+    <!-- Big Heading below buttons and containers -->
     <h1 class="big-heading">Welcome to </br>KREME-A-PEPE!</h1>
-  <p class="explore">Experience the fusion of cultural heritage and contemporary </br> 
-    trends with Kreme-a-Pepe—a taste of home and exciting new flavors!</p>
+    <p class="explore">Explore our menu and discover delightful flavors!</p>
     <div class="explore-button">
-      <a href="KREME.html">Explore our menu</a>
+      <a href="KREME.html">Explore Now</a>
     </div>
   </div>
 </body>
