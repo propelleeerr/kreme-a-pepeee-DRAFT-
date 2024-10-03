@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
@@ -271,68 +273,48 @@
    margin: 0 20px;
 }
 
-/* General Styles */
-body {
-    font-family: "Outfit", sans-serif; /* Adjusted to preferred font */
-    margin: 0;
-    padding: 0;
-}
-
-/* Responsive Container */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-/* Heading Style */
-h1 {
-    text-align: center;
-}
-
-/* Image Container Style */
-.image-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-/* Individual Image Style */
-.image {
-    margin: 10px;
-    transition: transform 0.2s;
-}
-
-/* Responsive Styles for Images */
-.image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Hover Effects */
-.image:hover {
-    transform: scale(1.05);
-}
-
-/* Media Queries */
 @media (max-width: 768px) {
-    .image-container {
-        flex-direction: column; /* Stack images vertically */
-        align-items: center;
+    .header {
+        flex-direction: column; /* Stack header elements vertically */
+        align-items: flex-start; /* Align items to the start */
     }
 
-    .image {
-        width: 100%; /* Make images full width */
-        margin: 10px 0; /* Adjust margin for better spacing */
+    .logo-container {
+        margin-bottom: 10px; /* Space below the logo */
     }
-}
 
-@media (max-width: 480px) {
-    .image {
-        width: 100%; /* Full width for smaller screens */
+    .search-container {
+        width: 100%; /* Full width for the search bar */
+    }
+
+    .search-container input[type="text"] {
+        width: 100%; /* Full width for better usability */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: flex-start; /* Align buttons to the start */
+        margin-left: 0; /* Reset margin */
+    }
+
+    .button-container a {
+        margin-bottom: 10px; /* Space between buttons */
+    }
+
+    .big-heading {
+        font-size: 36px; /* Reduce font size for smaller screens */
+        margin-left: 0; /* Reset margin */
+        text-align: center; /* Center text */
+    }
+
+    .explore {
+        text-align: center; /* Center the explore text */
+        margin-left: 0; /* Reset margin */
+    }
+
+    .explore-button {
+        margin-left: 0; /* Reset margin */
+        text-align: center; /* Center the button */
     }
 }
 
