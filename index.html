@@ -196,94 +196,69 @@
       color: #684e4e;
     }
 
-    /* Responsive Styles */
+    body {
+    font-family: "Outfit", sans-serif; /* Adjusted to preferred font */
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Heading Style */
+h1 {
+    text-align: center;
+}
+
+/* Image Container Style */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Individual Image Style */
+.image {
+    margin: 10px;
+    transition: transform 0.2s;
+}
+
+/* Responsive Styles for Images */
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Hover Effects */
+.image:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-  /* Adjust the logo and logo text */
-  .logo {
-    max-height: 70px; /* Slightly reduce logo size */
-  }
+    .image-container {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center;
+    }
 
-  .logo-text {
-    font-size: 22px; /* Adjust font size for logo text */
-  }
-
-  /* Adjust header layout */
-  .header {
-    flex-direction: column; /* Stack header elements vertically */
-    align-items: flex-start; /* Align items to the start */
-  }
-
-  /* Search bar styling */
-  .search-container {
-    width: 100%; /* Make search bar full width */
-    margin-top: 10px; /* Add space above search bar */
-  }
-
-  .search-container input[type="text"] {
-    width: calc(100% - 40px); /* Adjust width to fit */
-  }
-
-  /* Button container styling */
-  .button-container {
-    flex-direction: column; /* Stack buttons vertically */
-    align-items: flex-start; /* Align items to the start */
-    margin-left: 0; /* Reset margin */
-  }
-
-  .button-container a {
-    margin-right: 0; /* Remove right margin */
-    margin-bottom: 10px; /* Add bottom margin for spacing */
-  }
-
-  /* Content styles */
-  .big-heading {
-    font-size: 30px; /* Reduce font size for smaller screens */
-    margin-left: 0; /* Reset margin */
-    text-align: center; /* Center text on smaller screens */
-  }
-
-  .explore {
-    font-size: 14px; /* Adjust font size for smaller screens */
-    margin-left: 0; /* Reset margin */
-    text-align: center; /* Center text on smaller screens */
-  }
-
-  .explore-button {
-    margin-left: 0; /* Reset margin */
-    text-align: center; /* Center button on smaller screens */
-  }
+    .image {
+        width: 100%; /* Make images full width */
+        margin: 10px 0; /* Adjust margin for better spacing */
+    }
 }
 
 @media (max-width: 480px) {
-  .big-heading {
-    font-size: 24px; /* Further reduce font size */
-  }
-
-  .explore {
-    font-size: 12px; /* Further reduce font size */
-  }
-
-  .explore-button {
-    padding: 8px 16px; /* Adjust button padding */
-  }
-
-  /* Search bar input */
-  .search-container input[type="text"] {
-    padding: 6px 10px; /* Reduce padding */
-  }
-
-  /* Adjust icon sizes */
-  .search-container button i,
-  .cart-button i,
-  .button-container .home-button i {
-    font-size: 14px; /* Reduce icon size */
-  }
-
-  .cart-button {
-    margin-left: 0; /* Reset margin */
-  }
+    .image {
+        width: 100%; /* Full width for smaller screens */
+    }
 }
-
   </style>
 </head>
 <body>
