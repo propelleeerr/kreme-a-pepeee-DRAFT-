@@ -17,6 +17,7 @@
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
     rel="stylesheet"
   />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport meta tag -->
   
   <style>
     body {
@@ -195,6 +196,53 @@
       background-color: white;
       color: #684e4e;
     }
+
+    /* Mobile styles */
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+      }
+
+      .logo-container {
+        margin-bottom: 10px; /* Space below the logo */
+      }
+
+      .search-container {
+        width: 100%; /* Full width for the search container */
+        margin-top: 10px; /* Space above the search bar */
+      }
+
+      .search-container input[type="text"] {
+        width: 100%; /* Full width for the input */
+      }
+
+      .big-heading {
+        font-size: 30px; /* Smaller font size for mobile */
+        margin-left: 0; /* Reset margin */
+        text-align: center; /* Center the heading */
+      }
+
+      .explore {
+        margin-left: 0; /* Reset margin */
+        text-align: center; /* Center the text */
+      }
+
+      .explore-button {
+        margin-left: 0; /* Reset margin */
+        text-align: center; /* Center the button */
+      }
+
+      .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: flex-start; /* Align items to the left */
+        margin-left: 0; /* Reset margin */
+      }
+
+      .button-container a {
+        margin: 5px 0; /* Space between buttons */
+      }
+    }
   </style>
 </head>
 <body>
@@ -219,7 +267,7 @@
 
   <!-- Buttons and line -->
   <div class="button-container">
-    <a href="kreme-a-pepe.html" class="home-button">
+    <a href="index.html" class="home-button">
       <i class="fas fa-home"></i> Home
     </a>
     <a href="ABOUT.html">About us</a>
@@ -231,16 +279,14 @@
     <div class="line"></div>
   </div>
 
+
   <div class="content">
-    <!-- Big Heading below buttons and containers -->
     <h1 class="big-heading">Welcome to </br>KREME-A-PEPE!</h1>
-    <p class="explore">Experience the fusion of cultural heritage and contemporary </br> 
-      trends with Kreme-a-Pepe—a taste of home and exciting new flavors!</p>
+  <p class="explore">Experience the fusion of cultural heritage and contemporary </br> 
+    trends with Kreme-a-Pepe—a taste of home and exciting new flavors!</p>
     <div class="explore-button">
-      <a href="KREME.html">Explore</a>
+      <a href="KREME.html">Explore our menu</a>
     </div>
   </div>
-
-  <!-- Other content goes here -->
 </body>
 </html>
