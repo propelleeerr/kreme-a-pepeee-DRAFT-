@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+  
+  <style>
+    body {
+      background-color: rgb(236, 234, 231);
+      font-family: "Outfit", sans-serif;
+      font-size: 14px;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Header container for better layout control */
+    .header {
+      display: flex;
+      justify-content: space-between; /* Space between logo/text and search bar */
+      align-items: center; /* Center items vertically */
+      margin-bottom: 20px;
+      padding: 10px 0; /* Add padding for aesthetics */
+    }
+
+    /* Logo and text container */
+    .logo-container {
+      display: flex;
+      align-items: center; /* Center items vertically */
+    }
+
+    /* Logo styling */
+    .header .logo {
+      max-height: 90px; /* Adjust logo size */
+      margin-right: 10px; /* Space between logo and text */
+    }
+
+    /* Logo text styling */
+    .logo-text {
+      font-size: 28px; /* Adjusted font size */
+      font-weight: bold; /* Bold text */
+      color: #605b4a; /* Text color */
+      font-family: 'Acme', sans-serif; /* Use Acme font */
+      letter-spacing: 1px; /* Add some spacing between letters */
+      text-transform: uppercase; /* Transform text to uppercase */
+    }
+
+    /* Search bar styling */
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-container input[type="text"] {
+      padding: 8px 12px; /* Increased padding for better spacing */
+      border: 1px solid #ccc; /* Light border */
+      border-radius: 20px; /* Rounded corners */
+      height: 40px; /* Increased height for a more substantial look */
+      width: 200px; /* Width of the search bar */
+      opacity: 1; /* Full opacity for better readability */
+      font-family: "Outfit", sans-serif; /* Use the same font family as the body */
+      font-size: 14px; /* Match the font size of the body */
+      transition: border-color 0.3s; /* Smooth transition for border color */
+    }
+
+    .search-container input[type="text"]:focus {
+      border-color: #605b4a; /* Change border color on focus */
+      outline: none; /* Remove default outline */
+    }
+
+    .search-container button {
+      background-color: transparent; /* Transparent background */
+      border: none; /* No border */
+      cursor: pointer; /* Pointer cursor on hover */
+      margin-left: 5px; /* Space between input and button */
+    }
+
+    .search-container button i {
+      font-size: 16px; /* Icon size */
+      color: black; /* Icon color */
+    }
+
+    /* Cart button styling */
+    .cart-button {
+      background-color: transparent; /* Transparent background */
+      border: none; /* No border */
+      cursor: pointer; /* Pointer cursor on hover */
+      margin-left: 5px; /* Space between the search button and cart button */
+    }
+
+    .cart-button i {
+      font-size: 16px; /* Icon size */
+      color: black; /* Icon color */
+      transition: fill 0.8s;
+    }
+
+    .cart-button i:hover {
+      color: #605b4a;
+    }
+
+    /* Button container styling */
+    .button-container {
+      display: flex;
+      align-items: center;
+      margin-top: 20px; /* Space above buttons */
+      margin-left: 20px;
+    }
+
+    .button-container a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      margin-right: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .button-container a:hover {
+      color: #494538;
+    }
+    
+    .button-container .home-button i {
+      font-size: 16px; 
+      margin-right: 5px;
+    }
+
+    .button-container .line {
+      flex-grow: 1; 
+      height: 1px;
+      background-color: black;
+      margin-left: 20px; 
+      margin-right: 20px;
+    }
+
+    /* About Us section styling */
+    .about-section {
+      margin-top: 60px;
+      text-align: center;
+      
+    }
+
+    .about-section h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #605b4a;
+    }
+
+    .about-section p {
+      font-size: 16px;
+      margin-bottom: 10px;
+      margin: 0 20px;
+      color: #494538;
+      text-align: justify;
+    }
+
+    /* Mission section styling */
+    .mission-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .mission-section h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #605b4a;
+    }
+
+    .mission-section p {
+      font-size: 16px;
+      margin: 0 20px;
+      color: #494538;
+    }
+
+    /* Team section styling */
+    .team-section {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .team-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #605b4a;
+    }
+
+    .team-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .team-member {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      padding: 10px;
+      width: 200px;
+      transition: transform 0.3s;
+      text-align: center; /* Center text inside each member's container */
+    }
+
+    .team-member img {
+      border-radius: 50%; /* Circular images */
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .team-member h3 {
+      font-size: 18px;
+      margin: 5px 0;
+      color: #494538;
+      font-weight: bold; /* Make position bold */
+    }
+
+    .team-member p {
+      font-size: 14px;
+      color: #777;
+      margin: 0; /* Remove default margin */
+    }
+
+    .team-member .info {
+      font-size: 14px; /* Style for additional information */
+      color: #494538; /* Text color */
+      margin-top: 5px; /* Space above the additional info */
+    }
+
+    .team-member:hover {
+      transform: scale(1.05); /* Slight zoom effect on hover */
+    }
+
+    #mission {
+    background-color: rgb(236, 234, 231); /* Light background color for better visibility */
+}
+
+#mission h2 {
+    color: #605b4a; /* Header color */
+    font-size: 28px; /* Adjust the font size */
+    margin-bottom: 10px; /* Space below the header */
+    text-align: center;
+}
+
+#mission ol {
+    padding-left: 20px; /* Indent the list */
+}
+
+#mission li {
+    margin-bottom: 10px; /* Space between items */
+    font-size: 16px; /* Font size for list items */
+    color: #494538;
+}
+
+#mission li p {
+   margin: 0 20px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <!-- Logo and text container -->
+    <div class="logo-container">
+      <img src="pictures/LOGO.png" alt="KREME-A-PEPE-LOGO" class="logo" />
+      <span class="logo-text">Where every bite is worth every peso!</span>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search-container">
+      <input type="text" placeholder="Search..." />
+      <button>
+        <i class="fas fa-search"></i>
+      </button>
+      <a href="CHECKOUT.html" class="cart-button">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Buttons and line -->
+  <div class="button-container">
+    <a href="kreme-a-pepe.html" class="home-button">
+      <i class="fas fa-home"></i> Home
+    </a>
+    <a href="ABOUT.html">About us</a>
+    <a href="STORY.html">Our story</a>
+    <a href="KREME.html">Menu</a>
+    <a href="NEWS.html">News</a>
+    <a href="CONTACT.html">Contact us</a>
+    <a href="FAQs.html">FAQs</a>
+    <div class="line"></div>
+  </div>
+
+  <!-- About Us Section -->
+  <div class="about-section">
+    <h2>About Us</h2>
+    <p>
+      Welcome to Kreme-a-Pepe, where we celebrate Filipino flavors in a fun and unique way! 
+      Our specialty, the Kreme-a-Pepe, is a coin-shaped Taiyaki inspired by the Philippine peso, 
+      filled with delicious local ingredients. We are a passionate team of student entrepreneurs 
+      dedicated to sharing the taste of home while connecting with our community. With every bite, 
+      we aim to bring a smile and a sense of belonging, making our delightful treats a perfect choice
+      for anyone looking to enjoy a flavorful twist on tradition.
+    </p>
+  </div>
+
+ <!-- Mission Section -->
+<section id="mission">
+  <h2>Our Mission</h2>
+  <ol>
+      <li>
+          <p>Celebrate Filipino Culture: To honor and preserve our rich culinary heritage by 
+          offering innovative, delicious, and culturally significant food products that resonate 
+          with the hearts of our customers.</p>
+      </li>
+      <li>
+          <p>Promote Community Engagement: To actively engage with our community by participating 
+          in local events, supporting initiatives, and providing unique food experiences that bring 
+          people together.</p>
+      </li>
+      <li>
+          <p>Deliver Quality and Affordability: To provide high-quality, flavorful snacks that are 
+          accessible and affordable for everyone, ensuring that our products can be enjoyed by students, 
+          families, and food enthusiasts alike.</p>
+      </li>
+      <li>
+          <p>Encourage Culinary Exploration: To inspire individuals to embrace the fusion of traditional 
+          and modern flavors, making Kreme-a-Pepe a must-try for those looking to embark on a delicious 
+          culinary adventure.</p>
+      </li>
+  </ol>
+</section>
+
+
+  <!-- Team Section -->
+  <div class="team-section">
+    <h2>Meet Our Team</h2>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="pictures/JILLIAN.png" alt="Team Member 1" />
+        <h3>Jillian Bernice Laviste</h3>
+        <p class="position">Chief Executive Officer (CEO)</p>
+        <p class="info">As a Maka-Filipino student, Jillian is committed to promoting local businesses and has inspired the group to focus on a venture that showcases traditional Filipino flavors.</p>
+      </div>
+      <div class="team-member">
+        <img src="pictures/ELLAH.png" alt="Team Member 2" />
+        <h3>Eluinah Jowelle Pagao</h3>
+        <p class="position">Chief Supply Chain Officer (CSCO) & Head of Supply Chain</p>
+        <p class="info">Eluinah, an active community member, has established strong connections with numerous entrepreneurs and investors, making her the perfect leader for the supply team.</p>
+      </div>
+      <div class="team-member">
+        <img src="pictures/JANA.png" alt="Team Member 3" />
+        <h3>Laura Juliana Yulo</h3>
+        <p class="position">Chief Operating Officer (COO) and Head of Logistics</p>
+        <p class="info">Jana excels in managing school activities and events. She frequently contributes her trucks and other transportation resources, establishing her as the ideal head of the logistics team.</p>
+      </div>
+      <div class="team-member">
+        <img src="pictures/KEIMI.png" alt="Team Member 4" />
+        <h3>Krizteffe Marie Nieves</h3>
+        <p class="position">Head Chef</p>
+        <p class="info">With a passion for baking cakes, cupcakes, and cookies, Keimi is dedicated to turning cravings into reality. As the head chef of the company, she will oversee product production.</p>
+      </div>
+      <div class="team-member">
+        <img src="pictures/YDDA.png" alt="Team Member 5" />
+        <h3>Ydda Lauren Nogra</h3>
+        <p class="position">Head of Marketing and Advertising (CMO)</p>
+        <p class="info">Ydda, a photographer and member of the school's photography club, will manage the product's marketing and advertising by creating impactful visuals.</p>
+      </div>
+      <div class="team-member">
+        <img src="pictures/NAINA.png" alt="Team Member 6" />
+        <h3>Naina Liza Rae Abainza</h3>
+        <p class="position">Social Media Manager</p>
+        <p class="info">Naina, an avid social media user, participates in discussions about various sweets and will manage the social media accounts of the company.</p>
+      </div>
+      <div class="team-member">
+        <img src="pictures/ARICA.png" alt="Team Member 7" />
+        <h3>Arica Dy Pueco</h3>
+        <p class="position">Brand Ambassador and Model</p>
+        <p class="info">Arica will be the model and advertiser, using her enthusiasm and strong social media presence to boost product visibility.</p>
+      </div>
+      <div class="team-member">
+        <img src="pictures/SOFIA.png" alt="Team Member 8" />
+        <h3>Katrina Sofia Joson</h3>
+        <p class="position">Food Critic</p>
+        <p class="info">Sofia, a lover of Filipino desserts, will be the food critic of the company, using her broad palate to evaluate and review the product.</p>
+      </div>
+      <div class="team-member">
+        <img src="pictures/MARTH.png" alt="Team Member 9" />
+        <h3>Marthanello Llovido</h3>
+        <p class="position">Product Innovator and Cultural Consultant (CCPI)</p>
+        <p class="info">Marthanello, passionate about traveling to Japan, is inspired by Taiyaki and aims to introduce Japanese culture to his home country.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

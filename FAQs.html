@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+  
+  <style>
+    body {
+      background-color: rgb(236, 234, 231);
+      font-family: "Outfit", sans-serif;
+      font-size: 14px;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Header container for better layout control */
+    .header {
+      display: flex;
+      justify-content: space-between; /* Space between logo/text and search bar */
+      align-items: center; /* Center items vertically */
+      margin-bottom: 20px;
+      padding: 10px 0; /* Add padding for aesthetics */
+    }
+
+    /* Logo and text container */
+    .logo-container {
+      display: flex;
+      align-items: center; /* Center items vertically */
+    }
+
+    /* Logo styling */
+    .header .logo {
+      max-height: 90px; /* Adjust logo size */
+      margin-right: 10px; /* Space between logo and text */
+    }
+
+    /* Logo text styling */
+    .logo-text {
+      font-size: 28px; /* Adjusted font size */
+      font-weight: bold; /* Bold text */
+      color: #605b4a; /* Text color */
+      font-family: 'Acme', sans-serif; /* Use Acme font */
+      letter-spacing: 1px; /* Add some spacing between letters */
+      text-transform: uppercase; /* Transform text to uppercase */
+    }
+
+    /* Search bar styling */
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-container input[type="text"] {
+      padding: 8px 12px; /* Increased padding for better spacing */
+      border: 1px solid #ccc; /* Light border */
+      border-radius: 20px; /* Rounded corners */
+      height: 40px; /* Increased height for a more substantial look */
+      width: 200px; /* Width of the search bar */
+      opacity: 1; /* Full opacity for better readability */
+      font-family: "Outfit", sans-serif; /* Use the same font family as the body */
+      font-size: 14px; /* Match the font size of the body */
+      transition: border-color 0.3s; /* Smooth transition for border color */
+    }
+
+    .search-container input[type="text"]:focus {
+      border-color: #605b4a; /* Change border color on focus */
+      outline: none; /* Remove default outline */
+    }
+
+    .search-container button {
+      background-color: transparent; /* Transparent background */
+      border: none; /* No border */
+      cursor: pointer; /* Pointer cursor on hover */
+      margin-left: 5px; /* Space between input and button */
+    }
+
+    .search-container button i {
+      font-size: 16px; /* Icon size */
+      color: black; /* Icon color */
+    }
+
+    /* Cart button styling */
+    .cart-button {
+      background-color: transparent; /* Transparent background */
+      border: none; /* No border */
+      cursor: pointer; /* Pointer cursor on hover */
+      margin-left: 5px; /* Space between the search button and cart button */
+    }
+
+    .cart-button i {
+      font-size: 16px; /* Icon size */
+      color: black; /* Icon color */
+      transition: fill 0.8s;
+    }
+
+    .cart-button i:hover {
+      color: #605b4a;
+    }
+
+    /* Button container styling */
+    .button-container {
+      display: flex;
+      align-items: center;
+      margin-top: 20px; /* Space above buttons */
+      margin-left: 20px;
+    }
+
+    .button-container a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      margin-right: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .button-container a:hover {
+      color: #494538; 
+    }
+
+    .button-container .home-button i {
+      font-size: 16px; 
+      margin-right: 5px;
+    }
+
+    .button-container .line {
+      flex-grow: 1; 
+      height: 1px;
+      background-color: black;
+      margin-left: 20px; 
+      margin-right: 20px;
+    }
+
+    .content {
+      margin-top: 15px;
+      margin-left: 10px;
+      padding: 20px;
+      font-family: "Outfit", sans-serif;
+      font-size: 25px;
+      color: #494538; 
+      font-weight: bold;
+    }
+
+    .big-heading {
+      font-size: 30px; /* Adjusted font size */
+      font-weight: bold; /* Bold text */
+      color: #494538; /* Text color */
+      font-family: 'Acme', sans-serif; /* Use Acme font */
+      letter-spacing: 1px; /* Add some spacing between letters */
+      margin-left: 30px;
+      margin-top: 4px;
+    }
+
+    .answers-content {
+      margin-left: 30px;
+      color: #494538;
+      font-family: 'Outline', sans-serif;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <!-- Logo and text container -->
+    <div class="logo-container">
+      <img src="pictures/LOGO.png" alt="KREME-A-PEPE-LOGO" class="logo" />
+      <span class="logo-text">Where every bite is worth every peso!</span>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search-container">
+      <input type="text" placeholder="Search..." />
+      <button>
+        <i class="fas fa-search"></i>
+      </button>
+      <a href="CHECKOUT.html" class="cart-button">
+        <i class="fas fa-shopping-cart"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Buttons and line -->
+  <div class="button-container">
+    <a href="kreme-a-pepe.html" class="home-button">
+      <i class="fas fa-home"></i> Home
+    </a>
+    <a href="ABOUT.html">About us</a>
+    <a href="STORY.html">Our story</a>
+    <a href="KREME.html">Menu</a>
+    <a href="NEWS.html">News</a>
+    <a href="CONTACT.html">Contact us</a>
+    <a href="FAQs.html">FAQs</a>
+    <div class="line"></div>
+  </div>
+
+  <div class="content"></div>
+    <!-- Big Heading below buttons and containers -->
+    <h1 class="big-heading">Frequently Asked Questions</h1>
+    <p class="content">1. Why is the product called "Kreme-a-Pepe"?</p>
+    </div>
+
+  <div class="answers-content"></div>
+    <p class="answers-content">The name “Kreme-a-Pepe” playfully combines the words “Kreme” with 
+      the nickname of Jose Rizal, "Pepe,” which symbolizes the committment of the company in
+      celebrating and promoting Filipino heritage through its unique offerings.</p>
+    </div>
+
+  </div>
+
+  <!-- Other content goes here -->
+</body>
+</html>
